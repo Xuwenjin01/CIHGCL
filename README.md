@@ -1,6 +1,5 @@
 # CIHGCL: Collective-Individual Intent-Aware Heterogeneous Graph Contrastive Learning for Recommendation
 
-We will organize the complete code and upload it after the paper is accepted for publication.
 ### Enviroments
 - python==3.10
 - pytorch==2.0
