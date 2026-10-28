@@ -127,7 +127,7 @@ if __name__ == '__main__':
     os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
     args = utility.parser.parse_args()
     args.model = "CIHGCL"
-    log_folder = args.model + "_log"  # 日志文件夹名称
+    log_folder = args.model + "_log"  
     if not os.path.exists(log_folder):
         os.makedirs(log_folder)
     next_log_filename = get_next_log_filename(log_folder)
