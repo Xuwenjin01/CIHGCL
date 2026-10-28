@@ -34,7 +34,7 @@ class SemanticAttention(nn.Module):
         return (beta * z).sum(1)  # (N, D * K)
 
 
-# Metapath-based aggregation (the same as the HANLayer)
+# Metapath-based aggregation 
 class HANLayer(nn.Module):
     def __init__(self, meta_path_patterns, in_size, out_size, layer_num_heads, dropout):
         super(HANLayer, self).__init__()
