@@ -19,7 +19,6 @@ with open(os.path.join("user_item.dat")) as fin:
             user_item_src.append(user)
             user_item_dst.append(item)
 
-        # 记录user和item的交互次数
         user_interactions[user] += 1
         item_interactions[item] += 1
 
