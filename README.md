@@ -14,13 +14,19 @@ pip install torch==2.0 torchvision torchaudio --index-url https://download.pytor
 ```
 pip install  dgl==2.0 -f https://data.dgl.ai/wheels/cu118/repo.html
 ```
-### Running on Amazon, Douban-Movie, Yelp, and Movielens Datasets
+### Running on Yelp, DoubanBook, Amazon, Movielens and DoubanMovie Datasets
 ```
-python main_CIHGCL.py --dataset=Yelp --device='cuda:0' --lr=0.0005 --dim=128  --epochs=100  --batch_size=1024 --test_batch_size=300  --verbose=1  --GCN_layer=2 --cl_rate=0.01 --gamma=1.0 --beta=1.0
+python main_CIHGCL.py --model=CIHGCL --dataset=Yelp --gpu=0  --lr=0.0005 --dim=128 --epochs=100 --verbose=1 --GCNLayer=2 --n_intents=32 --intra_ssl_reg=0.05  --cen_reg=1e-5  --cl_rate=0.01  --gamma=1.0 --beta=1.0
 ```
 ```
-python main_CIHGCL.py --dataset=DoubanBook --device='cuda:0' --lr=0.0005 --dim=128  --epochs=100  --batch_size=1024 --test_batch_size=300  --verbose=1  --GCN_layer=1 --cl_rate=0.1 --gamma=1.0 --beta=1.0
+python main_CIHGCL.py --model=CIHGCL --dataset=DoubanBook --gpu=0 --lr=0.0005 --dim=128 --epochs=100 --verbose=1 --GCNLayer=1 --n_intents=64 --intra_ssl_reg=0.1 --cen_reg=1e-5 --cl_rate=0.1 --gamma=1.0 --beta=1.0
 ```
 ``` 
-python main_CIHGCL.py --dataset=Yelp --device='cuda:0' --lr=0.0005 --dim=128  --epochs=100  --batch_size=1024 --test_batch_size=300  --verbose=1  --GCN_layer=1 --cl_rate=0.2 --gamma=1.0 --beta=1.0
+python main_CIHGCL.py --model=CIHGCL --dataset=Amazon --gpu=0 --lr=0.0005 --dim=128 --epochs=100 --verbose=1 --GCNLayer=1 --n_intents=64 --intra_ssl_reg=0.05 --cen_reg=1e-5  --cl_rate=0.01 --gamma=1.0 --beta=1.0
+```
+``` 
+python main_CIHGCL.py --model=CIHGCL --dataset=Movielens --gpu=0 --lr=0.0005 --dim=128 --epochs=150  --verbose=1 --GCNLayer=2 --n_intents=64 --intra_ssl_reg=0.05 --cen_reg=1e-4 --cl_rate=0.01 --gamma=1.0 --beta=1.0
+```
+``` 
+python main_CIHGCL.py --model=CIHGCL --dataset=DoubanMovie --gpu=0 --lr=0.0005 --dim=128 --epochs=100 --verbose=1 --GCNLayer=1 --n_intents=64 --intra_ssl_reg=0.1 --cen_reg=1e-5 --cl_rate=0.2 --gamma=1.0 --beta=1.0
 ```

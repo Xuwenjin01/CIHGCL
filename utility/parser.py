@@ -19,7 +19,7 @@ def parse_args():
     parser.add_argument('--epochs', type=int, default=1000, help='number of epochs')
     parser.add_argument('--batch_size', type=int, default=1024, help='batch size')
     parser.add_argument('--layer_size', nargs='?', default='[64,64,64]', help='Output sizes of every layer')
-    parser.add_argument('--test_batch_size', type=int, default=100, help='batch size')
+    parser.add_argument('--test_batch_size', type=int, default=300, help='batch size')
     parser.add_argument("--mess_keep_prob", nargs='?', default='[0.1, 0.1, 0.1]', help="ratio of node dropout")
     parser.add_argument("--node_keep_prob", type=float, default=0.1, help="ratio of node dropout")
     parser.add_argument('--dim', type=int, default=128, help='embedding size')
