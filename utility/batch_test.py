@@ -136,7 +136,7 @@ def Test(dataset: Data, model, device, topK, flag_multicore, test_batch_size, lo
 def test_one_batch(X):
     recommender_items = X[0].numpy()
     ground_true_items = X[1]
-    top_K = X[2]  # use topK from caller (e.g., [20] for RECALL@20)
+    top_K = X[2]  # use topK from caller 
     r = utility.metrics.get_label(ground_true_items, recommender_items)
     precision, recall, ndcg, HR = [], [], [], []
     for k_size in top_K:
