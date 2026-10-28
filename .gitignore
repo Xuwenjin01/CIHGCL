@@ -1,13 +1,36 @@
-# Python bytecode and cache
+# Python cache
 __pycache__/
 *.py[cod]
+.pytest_cache/
 
-# IDE configuration
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Node dependencies
+node_modules/
+
+# Training logs and temporary files
+HNGCL_log/
+analysis_logs/
+tmp/
+*.log
+
+# Generated experiment results
+outputs/
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+*.pkl
+
+# IDE and system files
 .vscode/
 .idea/
-
-# Logs
-*.log
+.DS_Store
+Thumbs.db
 
 # Environment variables and credentials
 .env
