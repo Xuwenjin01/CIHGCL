@@ -8,9 +8,6 @@ __pycache__/
 venv/
 env/
 
-# Node dependencies
-node_modules/
-
 # Training logs and temporary files
 HNGCL_log/
 analysis_logs/
